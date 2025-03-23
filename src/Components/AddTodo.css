@@ -1,0 +1,109 @@
+/* AddTodo.css */
+
+.add-todo-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.add-todo-form {
+  width: 100%;
+  max-width: 1000px; /* Limit form width for better readability */
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f8f8; /* Slightly lighter background */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-input:focus {
+  border-color: #6b48ff; /* Use your primary color */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 72, 255, 0.2);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  align-self: stretch; /* Stretch to fill container width */
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    to right,
+    #6b48ff,
+    #8a63ff
+  ); /* Gradient background */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(107, 72, 255, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(107, 72, 255, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-todo-form {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+}

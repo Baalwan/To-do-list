@@ -1,10 +1,23 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Header Styling */
+.App-header {
+  background-color: #00008b; /* Deep blue color */
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+/* Logo Animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +26,84 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Content Container */
+.todo-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Card-like styling for todo items */
+.todo-list {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.add-todo-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Button Styling */
+button {
+  background-color: #b71c1c; /* A good, standard delete red */
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
   color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Link Styling */
 .App-link {
-  color: #61dafb;
+  color: #6b48ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.App-link:hover {
+  color: #00ddeb;
+}
+
+/* Footer Styling */
+footer {
+  padding: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-container {
+    margin: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .App-header {
+    padding: 1.5rem 0.5rem;
   }
 }

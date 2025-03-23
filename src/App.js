@@ -1,9 +1,9 @@
-import './App.css';
-import Header from "./Components/Header"
-import Todos from "./Components/Todos"
-import AddTodo from "./Components/AddTodo"
-import Footer from "./Components/Footer"
-import React, { useState, useEffect } from 'react';
+import "./App.css";
+import Header from "./Components/Header";
+import Todos from "./Components/Todos";
+import AddTodo from "./Components/AddTodo";
+import Footer from "./Components/Footer";
+import React, { useState, useEffect } from "react";
 
 function App() {
   let initTodo;
@@ -19,7 +19,7 @@ function App() {
     initTodo = [];
   }
 
-  const [todos, setTodos] = useState(initTodo); // Initialize todos BEFORE addTodo
+  const [todos, setTodos] = useState(initTodo);
 
   const onDelete = (todo) => {
     console.log("Deleted", todo);
@@ -50,12 +50,18 @@ function App() {
   }, [todos]);
 
   return (
-    <>
-      <Header title="My To Do List" searchbar={true} />
-      <AddTodo addTodo={addTodo} />
-      <Todos todos={todos} onDelete={onDelete} />
+    <div className="App">
+      <Header className="App-header" title="My To Do List" searchbar={true} />
+      <div className="todo-container">
+        <div className="add-todo-form">
+          <AddTodo addTodo={addTodo} />
+        </div>
+        <div className="todo-list">
+          <Todos todos={todos} onDelete={onDelete} />
+        </div>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
